@@ -18,29 +18,40 @@
 
 <script type="text/babel">
     const root = document.getElementById("app");
-
-    const Movie = ({name, year, img}) => {
+    const Movie = ({name, year, img, description}) => {
         return (
             <div className="MovieItem">
                 <p><strong>Title:</strong> <i>{name}</i></p>
                 <p><strong>Year:</strong> <i>{year}</i></p>
-                <img src={img} alt="movieImg" style={{width:"200px"}}/>
+                <img src={img} alt="movieImg" style={{width: "200px", height: "300px"}}/>
+                <p className="MovieDescription"><strong>Briefly:</strong><i> {description}</i></p>
             </div>
         )
     }
 
     const MoviesList = (
+        <div id="MoviesList">
             <Movie
                 name="Titanic"
                 year="1912"
-                img="https://www.shuspectra.com/wp-content/uploads/2022/01/titanic-631x900.jpg"/>
-        )
+                img="https://www.shuspectra.com/wp-content/uploads/2022/01/titanic-631x900.jpg"
+                description="Titanic is a 1997 American epic romantic disaster film directed, written, produced, and co-edited by James Cameron. Incorporating both historical and fictionalized aspects, it is based on accounts of the sinking of RMS Titanic in 1912. Leonardo DiCaprio and Kate Winslet star as members of different social classes who fall in love during the ship's maiden voyage. The film also features an ensemble cast of Billy Zane, Kathy Bates, Frances Fisher, Gloria Stuart, Bernard Hill, Jonathan Hyde, Victor Garber, David Warner, Suzy Amis and Bill Paxton.
 
-    ReactDOM.createRoot(root).render(MoviesList)
+"/>
+            <Movie
+                name="Halo"
+                year="2019"
+                img="https://styles.redditmedia.com/t5_3kwdlt/styles/communityIcon_mohcv3rt6chc1.png"
+                description="Halo is an American military science fiction television series developed by Kyle Killen and Steven Kane for the streaming service Paramount+. Based on the video game franchise created by Bungie and developed by 343 Industries, the series follows a 26th-century war between the United Nations Space Command and the Covenant, a theocratic-military alliance of several alien races determined to eradicate humanity. Pablo Schreiber and Jen Taylor star as Master Chief Petty Officer John-117 and Cortana; the latter reprises her voice role from the video game series."/>
 
-
-
-
+            <Movie
+                name="GOAT"
+                year="2017"
+                img="https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg"
+                description="Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss for HBO. It is an adaptation of A Song of Ice and Fire, a series of fantasy novels by George R. R. Martin, the first of which is A Game of Thrones. The show premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons."/>
+        </div>
+    )
+    ReactDOM.createRoot(root).render(MoviesList);
 </script>
 </body>
 </html>

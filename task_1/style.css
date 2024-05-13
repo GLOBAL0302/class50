@@ -1,14 +1,20 @@
 #app{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#MoviesList{
+    display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .MovieItem{
     max-width: 200px;
-    height: 400px;
     padding: 10px;
     border: 2px solid black;
     background: navajowhite;
 }
-
 
