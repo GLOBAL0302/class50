@@ -1,0 +1,14 @@
+#app{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MovieItem{
+    max-width: 200px;
+    height: 400px;
+    padding: 10px;
+    border: 2px solid black;
+    background: navajowhite;
+}
+
+

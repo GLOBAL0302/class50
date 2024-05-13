@@ -8,16 +8,39 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-<div id="root">
+<div id="app">
 
 </div>
 
-    <script type="text/babel">
-     const root = document.getElementById("root");
+<script type="text/babel">
+    const root = document.getElementById("app");
 
-    </script>
+    const Movie = ({name, year, img}) => {
+        return (
+            <div className="MovieItem">
+                <p><strong>Title:</strong> <i>{name}</i></p>
+                <p><strong>Year:</strong> <i>{year}</i></p>
+                <img src={img} alt="movieImg" style={{width:"200px"}}/>
+            </div>
+        )
+    }
+
+    const MoviesList = (
+            <Movie
+                name="Titanic"
+                year="1912"
+                img="https://www.shuspectra.com/wp-content/uploads/2022/01/titanic-631x900.jpg"/>
+        )
+
+    ReactDOM.createRoot(root).render(MoviesList)
+
+
+
+
+</script>
 </body>
 </html>
