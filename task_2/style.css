@@ -3,6 +3,7 @@
 }
 .wrapper{
     padding: 30px 115px 0 115px;
+    box-sizing: border-box;
 }
 
 .nav a{
@@ -14,5 +15,40 @@
 .content_left h2{
     font-weight: 700;
     font-size: 55px;
+    color: #00CCCC;
+}
+.content_right{
+    position: relative;
+}
+.content_right:before{
+    content: "";
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    background-image: url("img/content_people.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: -113px;
+    right: 200px;
+}
+
+.sideBar{
+    max-height: 700px;
+    overflow: scroll;
+}
+
+.sideBar a{
+    text-decoration: none;
+    color: #00CCCC;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Apple Color Emoji";
+}
+
+.footer_right a{
+    text-decoration: none;
+    color: #0F2336;
+}
+.footer_right div a:first-child{
     color: #00CCCC;
 }

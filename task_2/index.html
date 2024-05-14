@@ -21,7 +21,7 @@
     const root = document.getElementById("root")
     const Header = ()=>{
         return(
-            <header className="d-flex align-content-center mb-5">
+            <header className="d-flex align-content-center mb-4">
                     <img src="img/headerLogo.svg" alt=""/>
                 <nav className="ms-auto nav d-flex align-content-center gap-5">
                     <a href="#">Stores</a>
@@ -35,14 +35,63 @@
     const Content = ()=>{
         return(
             <div className="content d-flex">
-                <div className="content_left d-flex flex-column justify-content-center" style={{width:"50%"}}>
+                <div className="content_left d-flex flex-column justify-content-center" style={{width:"40%"}}>
                     <h2>Order ahead</h2>
                     <h2 style={{color:"#0F2336"}}>and earn rewards for every purchase <span>.</span></h2>
                     <button style={{width:"200px"}} className="btn btn-success">Discover how</button>
                 </div>
 
                 <div className="content_right">
-                    <img src="img/content_people.png" alt="people"/>
+                    <img src="img/people_Back.svg" alt="people" style={{width:"800px"}}/>
+                </div>
+            </div>
+        )
+    }
+
+    const SideBarItem = ({title, img})=>{
+        return(
+            <div className="d-flex flex-column border-bottom">
+                <img src={img} alt="orderIcon"/>
+                <a href="#" className="ms-auto me-auto">{title}</a>
+            </div>
+        )
+    }
+
+    const SideBar = ()=>{
+        return(
+            <div className="border border-5 p-3 d-flex flex-column justify-content-center gap-3 rounded-4 sideBar">
+                <SideBarItem title="Order" img={"img/sideBarOrdersvg.svg"}/>
+                <SideBarItem title="Discount" img={"img/sideBarDiscount.svg"}/>
+                <SideBarItem title="Share" img={"img/sideBarShare.svg"}/>
+                <SideBarItem title="More" img={"img/sideBarOrdersvg.svg"}/>
+                <SideBarItem title="Others" img={"img/sideBarOrdersvg.svg"}/>
+            </div>
+        )
+    }
+
+    const Footer = ()=>{
+        return(
+            <div className="footer border border-4 p-3 rounded-5">
+                <div className="footer_left">
+                    <img src="img/headerLogo.svg" alt=""/>
+                </div>
+                <div className="footer_right d-flex gap-5">
+                    <div className="d-flex flex-column justify-content-center">
+                        <a href="#">Company</a>
+                        <a href="#" >Merchant Portal</a>
+                    </div>
+                    <div className="d-flex flex-column justify-content-center">
+                        <a href="#">Support</a>
+                        <a href="#" >FAQ</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <div className="d-flex flex-column justify-content-center">
+                        <a href="#">Follow Us</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                    </div>
                 </div>
             </div>
         )
@@ -51,7 +100,11 @@
     const page = (
         <div className="wrapper">
             <Header/>
-            <Content/>
+            <div className="d-flex">
+                <Content/>
+                <SideBar/>
+            </div>
+            <Footer/>
         </div>
     )
 
